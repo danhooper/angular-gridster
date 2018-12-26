@@ -1269,10 +1269,10 @@
 
 				if (window.navigator.msPointerEnabled) {
 					//  Microsoft pointer model
-					target.addEventListener('MSPointerDown', doEvent, false);
-					target.addEventListener('MSPointerMove', doEvent, false);
-					target.addEventListener('MSPointerUp', doEvent, false);
-					target.addEventListener('MSPointerCancel', doEvent, false);
+					target.addEventListener('pointerdown', doEvent, false);
+					target.addEventListener('pointermove', doEvent, false);
+					target.addEventListener('pointerup', doEvent, false);
+					target.addEventListener('pointercancel', doEvent, false);
 
 					//  css way to prevent panning in our target area
 					if (typeof target.style.msContentZooming !== 'undefined') {
@@ -1328,10 +1328,10 @@
 			this.disable = function() {
 				if (window.navigator.msPointerEnabled) {
 					//  Microsoft pointer model
-					target.removeEventListener('MSPointerDown', doEvent, false);
-					target.removeEventListener('MSPointerMove', doEvent, false);
-					target.removeEventListener('MSPointerUp', doEvent, false);
-					target.removeEventListener('MSPointerCancel', doEvent, false);
+					target.removeEventListener('pointerdown', doEvent, false);
+					target.removeEventListener('pointermove', doEvent, false);
+					target.removeEventListener('pointerup', doEvent, false);
+					target.removeEventListener('pointercancel', doEvent, false);
 
 					//  reset zooming to saved value
 					if (contentZooming) {
